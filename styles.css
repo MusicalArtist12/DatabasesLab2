@@ -2,16 +2,45 @@
     box-sizing: border-box;
 }
 
+:root {
+    --foreground: #DEF3FD;
+}
 
 body {
+    background-color: #000f14;
+    color: var(--foreground);
+    padding: 2em 0em;
     margin: 0;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
+    row-gap: 2em;
+    a {
+        color: var(--foreground);
+        font-weight: bolder;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 
+    nav {
+        a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
     header {
         flex: 0 1 auto;
-        height: 20vh;
+        height: 5em;
+        display: flex;
+        flex-direction: row;
+        column-gap: 2em;
+        justify-content: center;
+        align-items: center;
 
         nav {
             height: 100%;
@@ -21,17 +50,71 @@ body {
             align-items: center;
             column-gap: 2em;
 
-            a {
 
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+            img {
+                height: 100%;
             }
         }
     }
 
     main {
         flex: 1 1 auto;
+
+        margin: auto;
+        width: 80%;
+
+        h1 {
+            text-align: center;
+        }
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+        div {
+            border: 5px var(--foreground) solid;
+            border-radius: 10px;
+            padding: 0em 1em;
+            p {
+                font-size: 16pt;
+                font-weight: bold;
+            }
+        }
     }
 
     footer {
         flex: 0 1 auto;
+        p {
+            text-align: center;
+        }
+        nav {
+            margin: auto;
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 2em;
+
+        }
+
+        div.tags {
+            display: flex;
+            flex-direction: row;
+            row-gap: 10px;
+            column-gap: 10px;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2em;
+            img {
+                image-rendering: pixelated;
+                height: 31px;
+                width: 88px;
+            }
+        }
     }
 }
