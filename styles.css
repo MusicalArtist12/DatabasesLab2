@@ -1,0 +1,37 @@
+*, html {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+
+    header {
+        flex: 0 1 auto;
+        height: 20vh;
+
+        nav {
+            height: 100%;
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 2em;
+
+            a {
+
+            }
+        }
+    }
+
+    main {
+        flex: 1 1 auto;
+    }
+
+    footer {
+        flex: 0 1 auto;
+    }
+}
